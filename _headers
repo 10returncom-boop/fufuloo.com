@@ -1,0 +1,25 @@
+# HTML 頁面：禁止快取，爬蟲每次拿到最新版
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# 根目錄與主要入口
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+/search.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# sitemap / robots：繞過快取
+/sitemap.xml
+  Cache-Control: no-cache, no-store, must-revalidate
+/robots.txt
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# 靜態資源：長 TTL 快取（immutable）
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+/images-png/*
+  Cache-Control: public, max-age=31536000, immutable

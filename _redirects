@@ -1,0 +1,2 @@
+# www → 主網域 301（正式網域啟用後生效）
+https://www.fufuloo.com/*  https://fufuloo.com/:splat  301
